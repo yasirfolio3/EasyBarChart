@@ -11,15 +11,14 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.summary          = 'Pod to create bar charts.'
   s.swift_version    = '4.1'
-
   s.description      = 'This CocoaPod provides a simple interface to create multiple bar charts through UICollectionView.'
-
-
   s.homepage         = 'https://github.com/yasirfolio3/EasyBarChart'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'yasirfolio3' => 'yali@folio3.com' }
-  s.source           = { :git => 'https://github.com/yasirfolio3/EasyBarChart.git', :tag => s.version }
-
+  s.source           = { :git => 'https://github.com/yasirfolio3/EasyBarChart.git', :tag => s.version.to_s }
+  
   s.ios.deployment_target = '9.0'
+  s.requires_arc = true
+  
   s.source_files = 'EasyBarChart/Classes/**/*'
 end
