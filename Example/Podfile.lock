@@ -1,0 +1,16 @@
+PODS:
+  - EasyBarChart (0.1.0)
+
+DEPENDENCIES:
+  - EasyBarChart (from `../`)
+
+EXTERNAL SOURCES:
+  EasyBarChart:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EasyBarChart: ee2f0ecfa4f15d91075c97df610ebafe04fdbe1b
+
+PODFILE CHECKSUM: 42db56bbeb475a9d17d16d11730ac0d9569f91cf
+
+COCOAPODS: 1.5.3

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EasyBarChart'
-  s.version          = '0.2.0'
+  s.version          = '0.1.0'
   s.summary          = 'Pod to create bar charts.'
   s.swift_version    = '4.1'
 
@@ -21,6 +21,5 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/yasirfolio3/EasyBarChart.git', :tag => s.version }
 
   s.ios.deployment_target = '9.0'
-
   s.source_files = 'EasyBarChart/Classes/**/*'
 end
