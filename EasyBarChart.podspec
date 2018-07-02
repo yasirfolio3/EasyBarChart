@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/yasirfolio3/EasyBarChart'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'yasirfolio3' => 'yali@folio3.com' }
-  s.source           = { :git => 'https://github.com/yasirfolio3/EasyBarChart.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/yasirfolio3/EasyBarChart.git', :tag => '0.1.0' }
 
   s.ios.deployment_target = '9.0'
 
