@@ -12,14 +12,14 @@ import EasyBarChart
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var layout: CustomFlowLayout!
+    var layout = BarFlowLayout()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        super.didReceiveMemoryWarning()    
     }
     
     override func viewDidLayoutSubviews() {
@@ -33,11 +33,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     @objc func updateFlowLayout() {
-        
-        if(layout == nil){
-            layout = CustomFlowLayout.init()
-        }
-        
+
         let width: CGFloat = self.collectionView.frame.size.width
         let height: CGFloat = self.collectionView.frame.size.height
         let cellWidth: CGFloat = (width/5 - 5)
@@ -45,7 +41,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         collectionView!.collectionViewLayout = layout
-        collectionView.isPagingEnabled = false
         collectionView.reloadData()
     }
     
