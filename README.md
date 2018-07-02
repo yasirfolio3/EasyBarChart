@@ -5,10 +5,10 @@
 [![Version](https://img.shields.io/cocoapods/v/EasyBarChart.svg?style=flat)](https://cocoapods.org/pods/EasyBarChart)
 [![License](https://img.shields.io/cocoapods/l/EasyBarChart.svg?style=flat)](https://cocoapods.org/pods/EasyBarChart)
 [![Platform](https://img.shields.io/cocoapods/p/EasyBarChart.svg?style=flat)](https://cocoapods.org/pods/EasyBarChart)
-![EasyBarChart hero](https://github.com/yasirfolio3/EasyBarChart/blob/72ffcee1f310f29cf943fd81df67a69d784f0f3b/iphone_portrait.png)
-![EasyBarChart hero](https://github.com/yasirfolio3/EasyBarChart/blob/72ffcee1f310f29cf943fd81df67a69d784f0f3b/iphone_lanscape.png)
-![EasyBarChart hero](https://github.com/yasirfolio3/EasyBarChart/blob/72ffcee1f310f29cf943fd81df67a69d784f0f3b/ipad_portrait.png)
-![EasyBarChart hero](https://github.com/yasirfolio3/EasyBarChart/blob/72ffcee1f310f29cf943fd81df67a69d784f0f3b/ipad_landscape.png)
+![EasyBarChart hero](https://github.com/yasirfolio3/EasyBarChart/blob/2b76a2ded136013c60be2bdd1849c0dcab05b18b/iphone_portrait.png)
+![EasyBarChart hero](https://github.com/yasirfolio3/EasyBarChart/blob/2b76a2ded136013c60be2bdd1849c0dcab05b18b/iphone_landscape.png)
+![EasyBarChart hero](https://github.com/yasirfolio3/EasyBarChart/blob/2b76a2ded136013c60be2bdd1849c0dcab05b18b/ipad_portrait.png)
+![EasyBarChart hero](https://github.com/yasirfolio3/EasyBarChart/blob/2b76a2ded136013c60be2bdd1849c0dcab05b18b/ipad_landscape.png)
 
 ## Features
 
@@ -20,13 +20,16 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 let cell : BarCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BarCollectionViewCell", for: indexPath) as! BarCollectionViewCell
 
 cell.showArrow = (indexPath.row % 2 == 0)
-cell.barValue = 50
 cell.barSize = 50
 cell.backgroundImage = UIImage(named: "paper")
-cell.separatorColor = UIColor.darkGray
-cell.categoryImage = UIImage(named: "fruit")
-cell.categoryName = "NUTRITION"
-cell.themeColor = UIColor.purple
+cell.separatorColor = UIColor.red
+cell.categoryImage = UIImage(named: "png")
+cell.topLabel.text = "50"
+cell.topLabel.textColor = UIColor.white
+cell.topLabel.backgroundColor = UIColor.red
+cell.bottomLabel.text = "Title"
+cell.bottomLabel.textColor = UIColor.red
+cell.barBackgroundColor = UIColor.darkGray
 return cell
 }
 ```

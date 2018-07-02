@@ -56,13 +56,16 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         let cell : BarCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BarCollectionViewCell", for: indexPath) as! BarCollectionViewCell
         
         cell.showArrow = (indexPath.row % 2 == 0)
-        cell.barValue = 50
         cell.barSize = 50
         cell.backgroundImage = UIImage(named: "paper")
-        cell.separatorColor = UIColor.darkGray
-        cell.categoryImage = UIImage(named: "fruit")
-        cell.categoryName = "NUTRITION"
-        cell.themeColor = UIColor.purple
+        cell.separatorColor = UIColor.red
+        cell.categoryImage = UIImage(named: "png")
+        cell.topLabel.text = "50"
+        cell.topLabel.textColor = UIColor.white
+        cell.topLabel.backgroundColor = UIColor.red
+        cell.bottomLabel.text = "Title"
+        cell.bottomLabel.textColor = UIColor.red
+        cell.barBackgroundColor = UIColor.darkGray
         return cell
     }
     
