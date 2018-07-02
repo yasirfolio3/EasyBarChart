@@ -13,8 +13,8 @@
 		4E1363CCC6E17B713E7CFF6C792C9B50 /* Pods-EasyBarChart_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6409EA3EDBE045FF3A23F49C31387628 /* Pods-EasyBarChart_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91C59A188D668A234C406493A83F8D51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		99764B5D7D5760A89CD190F03F3F525F /* Pods-EasyBarChart_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5072DBC7F7C8D68F483EDBBCF272A35E /* Pods-EasyBarChart_Example-dummy.m */; };
-		C76A055620EA4CCD008AC44D /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A055420EA4CCD008AC44D /* CustomFlowLayout.swift */; };
-		C76A055720EA4CCD008AC44D /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A055420EA4CCD008AC44D /* CustomFlowLayout.swift */; };
+		C76A055620EA4CCD008AC44D /* BarFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A055420EA4CCD008AC44D /* BarFlowLayout.swift */; };
+		C76A055720EA4CCD008AC44D /* BarFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A055420EA4CCD008AC44D /* BarFlowLayout.swift */; };
 		C76A055820EA4CCD008AC44D /* BarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A055520EA4CCD008AC44D /* BarCollectionViewCell.swift */; };
 		C76A055920EA4CCD008AC44D /* BarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A055520EA4CCD008AC44D /* BarCollectionViewCell.swift */; };
 		CEBC074F955214723FB42B4BF75DE894 /* EasyBarChart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9439B43654BB8B6398F77A88610C3071 /* EasyBarChart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,7 +67,7 @@
 		B7DAD65EA03CC7D111FF93F6B3061C67 /* Pods-EasyBarChart_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EasyBarChart_Example.modulemap"; sourceTree = "<group>"; };
 		B95302F82C059236567420A1CD173690 /* Pods_EasyBarChart_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyBarChart_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C12008E281DE5A504CC15CF1B9212442 /* Pods-EasyBarChart_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EasyBarChart_Tests-dummy.m"; sourceTree = "<group>"; };
-		C76A055420EA4CCD008AC44D /* CustomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		C76A055420EA4CCD008AC44D /* BarFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarFlowLayout.swift; sourceTree = "<group>"; };
 		C76A055520EA4CCD008AC44D /* BarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCollectionViewCell.swift; sourceTree = "<group>"; };
 		C84BD956E6B3789DCDE322DF717553DB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C86258B328FD4EBB773B3CECF2A3E326 /* EasyBarChart.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = EasyBarChart.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -206,7 +206,7 @@
 		C76A055320EA4CCD008AC44D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C76A055420EA4CCD008AC44D /* CustomFlowLayout.swift */,
+				C76A055420EA4CCD008AC44D /* BarFlowLayout.swift */,
 				C76A055520EA4CCD008AC44D /* BarCollectionViewCell.swift */,
 			);
 			name = Classes;
@@ -365,7 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C76A055720EA4CCD008AC44D /* CustomFlowLayout.swift in Sources */,
+				C76A055720EA4CCD008AC44D /* BarFlowLayout.swift in Sources */,
 				99764B5D7D5760A89CD190F03F3F525F /* Pods-EasyBarChart_Example-dummy.m in Sources */,
 				C76A055920EA4CCD008AC44D /* BarCollectionViewCell.swift in Sources */,
 			);
@@ -375,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C76A055620EA4CCD008AC44D /* CustomFlowLayout.swift in Sources */,
+				C76A055620EA4CCD008AC44D /* BarFlowLayout.swift in Sources */,
 				2F5F1D2187310C4CC92B8750F54CCB6B /* EasyBarChart-dummy.m in Sources */,
 				C76A055820EA4CCD008AC44D /* BarCollectionViewCell.swift in Sources */,
 			);
