@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EasyBarChart_Example' do
+  pod 'EasyBarChart', :path => '../'
+
+  target 'EasyBarChart_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
