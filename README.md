@@ -15,6 +15,7 @@
 1.  This pod allows you to create multiple bar charts
 2.  Bar properties can be customized in the following delegate
 
+```
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 let cell : BarCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BarCollectionViewCell", for: indexPath) as! BarCollectionViewCell
 
@@ -28,6 +29,7 @@ cell.categoryName = "NUTRITION"
 cell.themeColor = UIColor.purple
 return cell
 }
+```
 
 3. It supports both iPad and iPhone resolutions and in all orientations
 4. Please follow the example project for proper implementation especially for orientation changes.
