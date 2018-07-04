@@ -13,29 +13,9 @@
 ## Features
 
 1.  This pod allows you to create multiple bar charts
-2.  Bar properties can be customized in the following delegate
-
-```
-func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-let cell : BarCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BarCollectionViewCell", for: indexPath) as! BarCollectionViewCell
-
-cell.showArrow = (indexPath.row % 2 == 0)
-cell.barSize = 50
-cell.backgroundImage = UIImage(named: "paper")
-cell.separatorColor = UIColor.red
-cell.categoryImage = UIImage(named: "png")
-cell.topLabel.text = "50"
-cell.topLabel.textColor = UIColor.white
-cell.topLabel.backgroundColor = UIColor.red
-cell.bottomLabel.text = "Title"
-cell.bottomLabel.textColor = UIColor.red
-cell.barBackgroundColor = UIColor.darkGray
-return cell
-}
-```
-
-3. It supports both iPad and iPhone resolutions and in all orientations
-4. Please follow the example project for proper implementation especially for orientation changes.
+2.  Ease of use has been the utmost priority as seen by the example.
+3.  It supports both iPad and iPhone resolutions and in all orientations
+4.  Please follow the example project for proper implementation especially for orientation changes.
 
 ## Usage
 

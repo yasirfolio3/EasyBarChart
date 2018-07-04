@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EasyBarChart'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Pod to create bar charts.'
   s.swift_version    = '4.1'
   s.description      = 'This CocoaPod provides a simple interface to create multiple bar charts through UICollectionView.'
