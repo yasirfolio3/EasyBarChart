@@ -10,7 +10,7 @@ import UIKit
 public class BarDataSource: NSObject, UICollectionViewDataSource {
     
     private var items = [BarDataModel]()
-    private var itemIdentifier: String = ""
+    private var itemIdentifier: String = "barCell"
     private var cellHeightToWidthRatio: Int = 5
     private var layout = BarFlowLayout()
     private var collectionView: UICollectionView?
@@ -19,13 +19,13 @@ public class BarDataSource: NSObject, UICollectionViewDataSource {
         super.init()
     }
     
-    public init(items:[BarDataModel], cellIdentifier: String, collectionView: UICollectionView, cellHeightToWidthRatio:Int) {
+    public init(items:[BarDataModel], collectionView: UICollectionView, cellHeightToWidthRatio:Int) {
         super.init()
         
         self.items = items
-        self.itemIdentifier = cellIdentifier
         self.cellHeightToWidthRatio = cellHeightToWidthRatio
         self.collectionView = collectionView
+        collectionView.register(BarCollectionViewCell.self, forCellWithReuseIdentifier: itemIdentifier)
     }
     
     public func setItems(items: [BarDataModel]){

@@ -98,12 +98,16 @@ public class BarCollectionViewCell: UICollectionViewCell {
             }
         }
     }
-
-    override public func awakeFromNib() {
-        super.awakeFromNib()
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
         self.initializeUI()
     }
     
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     override public func layoutSubviews() {
         super.layoutSubviews()
         self.updateUIForValue(value: barSize)
@@ -111,14 +115,16 @@ public class BarCollectionViewCell: UICollectionViewCell {
     
     private func initializeUI() {
         
-        mainContentView = UIView.init()
-        mainContentView.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.addSubview(mainContentView!)
-        
-        mainContentView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 0).isActive = true
-        mainContentView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0).isActive = true
-        mainContentView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 0).isActive = true
-        mainContentView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 0).isActive = true
+        if(mainContentView == nil){
+            mainContentView = UIView.init()
+            mainContentView.translatesAutoresizingMaskIntoConstraints = false
+            self.contentView.addSubview(mainContentView!)
+            
+            mainContentView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 0).isActive = true
+            mainContentView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0).isActive = true
+            mainContentView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 0).isActive = true
+            mainContentView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 0).isActive = true
+        }
         
         self.setupBottomView()
         self.setupTopView()

@@ -19,7 +19,7 @@ class ViewController: UIViewController,UICollectionViewDelegate {
         super.viewDidLoad()
         
         self.populateTemporaryItems()
-        barDataSource = BarDataSource(items: items, cellIdentifier: "cell", collectionView: collectionView, cellHeightToWidthRatio: 5)
+        barDataSource = BarDataSource(items: items, collectionView: collectionView, cellHeightToWidthRatio: 5)
         collectionView.dataSource = barDataSource
         collectionView.reloadData()
     }
