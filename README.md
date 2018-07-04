@@ -21,6 +21,54 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+Use this code to generate Charts:
+```
+@IBOutlet weak var collectionView: UICollectionView!
+var items = [BarDataModel]()
+var barDataSource: BarDataSource!
+
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    self.populateTemporaryItems() 
+    barDataSource = BarDataSource(items: items, collectionView: collectionView, cellHeightToWidthRatio: 5)
+    collectionView.dataSource = barDataSource
+    collectionView.reloadData()
+}
+
+//Method to fill items Array
+func populateTemporaryItems() {
+    for n in 0...20{
+        let barModel = BarDataModel()
+        barModel.showArrow = (n % 2 == 0)
+        barModel.barSize = 50
+        barModel.backgroundImage = UIImage(named: "paper")!
+        barModel.separatorColor = UIColor.red
+        barModel.categoryImage = UIImage(named: "png")!
+        barModel.topLabelText = "50"
+        barModel.topLabelTextColor = UIColor.white
+        barModel.topLabelBackgroundColor = UIColor.red
+        barModel.bottomLabelText = "Title"
+
+        self.items.append(barModel)
+    }
+}
+```
+
+Use these methods in your viewcontroller to handle orientation and device changes:
+
+```ruby
+override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    barDataSource.recalculateCellSizes()
+}
+
+override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    barDataSource.recalculateCellSizes()
+}
+```
+
 ## Requirements
 
 ```ruby
