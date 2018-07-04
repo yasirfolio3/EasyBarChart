@@ -9,66 +9,51 @@
 import UIKit
 import EasyBarChart
 
-class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class ViewController: UIViewController,UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var layout = BarFlowLayout()
+    var items = [BarDataModel]()
+    var barDataSource: BarDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.populateTemporaryItems()
+        barDataSource = BarDataSource(items: items, cellIdentifier: "cell", collectionView: collectionView, cellHeightToWidthRatio: 5)
+        collectionView.dataSource = barDataSource
+        collectionView.reloadData()
     }
-    
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()    
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.updateFlowLayout()
+        barDataSource.recalculateCellSizes()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        self.updateFlowLayout()
+        barDataSource.recalculateCellSizes()
     }
     
-    @objc func updateFlowLayout() {
-
-        let width: CGFloat = self.collectionView.frame.size.width
-        let height: CGFloat = self.collectionView.frame.size.height
-        let cellWidth: CGFloat = (width/5 - 5)
-        let cellHeight: CGFloat = height - 5
-        
-        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-        collectionView!.collectionViewLayout = layout
-        collectionView.reloadData()
+    func populateTemporaryItems() {
+        for n in 0...20{
+            let barModel = BarDataModel()
+            barModel.showArrow = (n % 2 == 0)
+            barModel.barSize = 50
+            barModel.backgroundImage = UIImage(named: "paper")!
+            barModel.separatorColor = UIColor.red
+            barModel.categoryImage = UIImage(named: "png")!
+            barModel.topLabelText = "50"
+            barModel.topLabelTextColor = UIColor.white
+            barModel.topLabelBackgroundColor = UIColor.red
+            barModel.bottomLabelText = "Title"
+            
+            self.items.append(barModel)
+        }
     }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : BarCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BarCollectionViewCell", for: indexPath) as! BarCollectionViewCell
-        
-        cell.showArrow = (indexPath.row % 2 == 0)
-        cell.barSize = 50
-        cell.backgroundImage = UIImage(named: "paper")
-        cell.separatorColor = UIColor.red
-        cell.categoryImage = UIImage(named: "png")
-        cell.topLabel.text = "50"
-        cell.topLabel.textColor = UIColor.white
-        cell.topLabel.backgroundColor = UIColor.red
-        cell.bottomLabel.text = "Title"
-        cell.bottomLabel.textColor = UIColor.red
-        cell.barBackgroundColor = UIColor.darkGray
-        return cell
-    }
-    
 }
 
 

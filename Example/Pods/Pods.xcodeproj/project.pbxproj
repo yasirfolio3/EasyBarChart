@@ -17,6 +17,10 @@
 		C76A055720EA4CCD008AC44D /* BarFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A055420EA4CCD008AC44D /* BarFlowLayout.swift */; };
 		C76A055820EA4CCD008AC44D /* BarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A055520EA4CCD008AC44D /* BarCollectionViewCell.swift */; };
 		C76A055920EA4CCD008AC44D /* BarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76A055520EA4CCD008AC44D /* BarCollectionViewCell.swift */; };
+		C791147120ECB6FF00BF769D /* BarDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791147020ECB6FF00BF769D /* BarDataModel.swift */; };
+		C791147220ECB6FF00BF769D /* BarDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791147020ECB6FF00BF769D /* BarDataModel.swift */; };
+		C791147420ECB76300BF769D /* BarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791147320ECB76300BF769D /* BarDataSource.swift */; };
+		C791147520ECB76300BF769D /* BarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C791147320ECB76300BF769D /* BarDataSource.swift */; };
 		CEBC074F955214723FB42B4BF75DE894 /* EasyBarChart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9439B43654BB8B6398F77A88610C3071 /* EasyBarChart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2FFBDC49CF1C76B4C7200292C1F8003 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		F2095070060A101DA5879503A4CE347E /* Pods-EasyBarChart_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A79E7E25AF85D2C8A8CFF26B9618AC /* Pods-EasyBarChart_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -69,6 +73,8 @@
 		C12008E281DE5A504CC15CF1B9212442 /* Pods-EasyBarChart_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EasyBarChart_Tests-dummy.m"; sourceTree = "<group>"; };
 		C76A055420EA4CCD008AC44D /* BarFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarFlowLayout.swift; sourceTree = "<group>"; };
 		C76A055520EA4CCD008AC44D /* BarCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCollectionViewCell.swift; sourceTree = "<group>"; };
+		C791147020ECB6FF00BF769D /* BarDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDataModel.swift; sourceTree = "<group>"; };
+		C791147320ECB76300BF769D /* BarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarDataSource.swift; sourceTree = "<group>"; };
 		C84BD956E6B3789DCDE322DF717553DB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C86258B328FD4EBB773B3CECF2A3E326 /* EasyBarChart.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = EasyBarChart.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CFA72D350D34421A7E2C5EF54BADB1E1 /* Pods_EasyBarChart_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyBarChart_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +214,8 @@
 			children = (
 				C76A055420EA4CCD008AC44D /* BarFlowLayout.swift */,
 				C76A055520EA4CCD008AC44D /* BarCollectionViewCell.swift */,
+				C791147020ECB6FF00BF769D /* BarDataModel.swift */,
+				C791147320ECB76300BF769D /* BarDataSource.swift */,
 			);
 			name = Classes;
 			path = EasyBarChart/Classes;
@@ -366,6 +374,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76A055720EA4CCD008AC44D /* BarFlowLayout.swift in Sources */,
+				C791147220ECB6FF00BF769D /* BarDataModel.swift in Sources */,
+				C791147520ECB76300BF769D /* BarDataSource.swift in Sources */,
 				99764B5D7D5760A89CD190F03F3F525F /* Pods-EasyBarChart_Example-dummy.m in Sources */,
 				C76A055920EA4CCD008AC44D /* BarCollectionViewCell.swift in Sources */,
 			);
@@ -376,6 +386,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76A055620EA4CCD008AC44D /* BarFlowLayout.swift in Sources */,
+				C791147120ECB6FF00BF769D /* BarDataModel.swift in Sources */,
+				C791147420ECB76300BF769D /* BarDataSource.swift in Sources */,
 				2F5F1D2187310C4CC92B8750F54CCB6B /* EasyBarChart-dummy.m in Sources */,
 				C76A055820EA4CCD008AC44D /* BarCollectionViewCell.swift in Sources */,
 			);

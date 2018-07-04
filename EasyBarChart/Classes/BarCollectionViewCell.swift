@@ -25,26 +25,25 @@ public class BarCollectionViewCell: UICollectionViewCell {
     private var categoryImageView: UIImageView!
     private let barHeightRange = 0..<101
     
-    //MARK:- Exposed Properties
-    public var backgroundImage : UIImage? {
+    private var backgroundImage : UIImage? {
         didSet{
             if let image = backgroundImage{
                 backgroundImageView.image = image
             }
         }
     }
-
-    public var topLabel: CircularLabel!
     
-    public var bottomLabel: UILabel!
+    private var topLabel: CircularLabel!
     
-    public var barBackgroundColor: UIColor = UIColor.purple {
+    private var bottomLabel: UILabel!
+    
+    private var barBackgroundColor: UIColor = UIColor.purple {
         didSet{
             barView.backgroundColor = barBackgroundColor
         }
     }
     
-    public var separatorColor: UIColor = UIColor.purple {
+    private var separatorColor: UIColor = UIColor.purple {
         didSet{
             separatorView.backgroundColor = separatorColor
         }
@@ -52,7 +51,7 @@ public class BarCollectionViewCell: UICollectionViewCell {
     
     //Min Value:- 0
     //Max Value:- 100
-    public var barSize : Int = 0 {
+    private var barSize : Int = 0 {
         didSet{
             if(barHeightRange.contains(barSize)){
                 self.updateUIForValue(value: barSize)
@@ -60,7 +59,7 @@ public class BarCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    public var categoryImage : UIImage? {
+    private var categoryImage : UIImage? {
         didSet{
             if let image = categoryImage{
                 categoryImageView.image = image
@@ -68,9 +67,35 @@ public class BarCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    public var showArrow: Bool = false{
+    private var showArrow: Bool = false{
         didSet{
             topArrowImageView.isHidden = !showArrow
+        }
+    }
+    
+    //MARK:- Exposed Properties
+    public var dataModel : BarDataModel? {
+        didSet{
+            if let _dataModel = dataModel{
+                showArrow = _dataModel.showArrow
+                barSize = _dataModel.barSize
+                backgroundImage = _dataModel.backgroundImage
+                separatorColor = _dataModel.separatorColor
+                categoryImage = _dataModel.categoryImage
+                topLabel.text = _dataModel.topLabelText
+                topLabel.textColor = _dataModel.topLabelTextColor
+                topLabel.backgroundColor = _dataModel.topLabelBackgroundColor
+                if let _font = _dataModel.topLabelFont{
+                    topLabel.font = _font
+                }
+                bottomLabel.text = _dataModel.bottomLabelText
+                bottomLabel.textColor = _dataModel.bottomLabelTextColor
+                bottomLabel.backgroundColor = _dataModel.bottomLabelBackgroundColor
+                if let _font = _dataModel.bottomLabelFont{
+                    bottomLabel.font = _font
+                }
+                barBackgroundColor = _dataModel.barBackgroundColor
+            }
         }
     }
 

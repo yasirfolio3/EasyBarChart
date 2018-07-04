@@ -8,13 +8,13 @@
 
 import UIKit
 
-public class BarFlowLayout: UICollectionViewFlowLayout {
+class BarFlowLayout: UICollectionViewFlowLayout {
     
-    public override init() {
+    override init() {
         super.init()
     }
     
-    public override func prepare() {
+    override func prepare() {
         super.prepare()
         
         self.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -23,7 +23,7 @@ public class BarFlowLayout: UICollectionViewFlowLayout {
         self.scrollDirection = .horizontal
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }
